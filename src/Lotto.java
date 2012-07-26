@@ -8,13 +8,15 @@ public class Lotto {
 	 * 인스턴스 변수
 	 */
 	public static void main(String[] args) {
-		new Lotto().printLotto();
+		new Lotto().getLotto();
 	}
 	
-	public void printLotto() {
+	public int[] getLotto() {
+		int[] numbers = new int[6];
 		for (int i = 0; i < 6; i++) {
-			System.out.println(getNumber());
+			numbers[i] = getNumber();
 		}
+		return numbers;
 	}
 
 	Random random = new Random();
